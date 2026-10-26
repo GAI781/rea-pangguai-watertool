@@ -52,7 +52,10 @@ test('旧照片的异步识别不能覆盖用户后来选定的设备',async({pa
 });
 test('通用扫码：不同 NQT/IMEI 码各自生成官方入口，特殊分流保持原码',async({page})=>{
  await page.goto('/');await page.getByText('粘贴链接',{exact:true}).click();
- for(const [key,value] of [['NQT','Test+abc/=='],['IMEI','12345678']]){await page.locator('#raw').fill(`https://h5.qiekj.com/skip?${key}=${encodeURIComponent(value)}`);await page.locator('#parse').click();await expect(page.locator('#miniSection')).toBeVisible();const launch=new URL(await page.locator('#miniUrl').textContent());expect(new URLSearchParams(launch.searchParams.get('query')).get(key)).toBe(value);await expect(page.locator('#mini')).toBeDisabled();}
+ for(const [key,value] of [['NQT','Test+abc/=='],['IMEI','12345678']]){await page.locator('#raw').fill(`https://h5.qiekj.com/skip?${key}=${encodeURIComponent(value)}`);await page.locator('#parse').click();await expect(page.locator('#miniSection')).toBeVisible();const launch=new URL(await page.locator('#miniUrl').textContent());expect(new URLSearchParams(launch.searchParams.get('query')).get(key)).toBe(value);await expect(page.locator('#mini')).toBeDisabled();
+  await page.locator('#name').fill(`${key} 测试`);await page.locator('#save').click();
+  const before=page.url();page.once('dialog',async dialog=>{expect(dialog.message()).toContain(`${key} 尾号`);await dialog.dismiss();});await page.getByRole('button',{name:`打开支付宝：${key} 测试`,exact:true}).click();expect(page.url()).toBe(before);
+ }
  await page.locator('#raw').fill('https://h5.qiekj.com/skip?SN=123456789012345&companyType=apwork');await page.locator('#parse').click();await expect(page.locator('#result')).toBeVisible();await expect(page.locator('#miniSection')).toBeHidden();await expect(page.locator('#info')).toContainText('companyType=apwork');
 });
 test('不支持的码可本机导出脱敏格式报告，不自动跳转或上传',async({page})=>{

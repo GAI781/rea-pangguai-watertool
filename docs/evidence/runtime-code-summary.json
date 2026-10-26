@@ -1,0 +1,123 @@
+{
+  "kind": "derived-research-summary-not-raw-REA-evidence",
+  "date": "2026-10-26",
+  "scope": "Empty owned API 24 ARMv7 emulator; no consent click, account login, real QR submission, water operation or payment. Read-only code/metadata capture.",
+  "originalApkSha256": "070de36f21e1128cea1bdc25a49241b3381276ff75b23974a477907fa44e971a",
+  "fridaVersion": "16.5.9",
+  "memoryDex": [
+    {
+      "file": "runtime-loaded-0.dex",
+      "bytes": 7577356,
+      "sha256": "135738cccd3f75a7c812fa23812da7aef089bc04429b0faa37bcd57110251a58",
+      "headerClassDefs": 5704,
+      "headerSha1Matches": false,
+      "headerAdler32Matches": true
+    },
+    {
+      "file": "runtime-loaded-1.dex",
+      "bytes": 6820920,
+      "sha256": "bed1f03d9f19bd28288f6bdef2ce792589bfbe16a25d51d7c16a3a09e7cd8342",
+      "headerClassDefs": 6982,
+      "headerSha1Matches": false,
+      "headerAdler32Matches": true
+    }
+  ],
+  "reaOperations": [
+    {
+      "file": "runtime-scan-classes.json",
+      "sha256": "9afd86124597a9a58b10bb165add1ea149ffd637efc9afd59090d456e721c521",
+      "evidenceId": "ev_f889556344581e1aeb75c8eefdea6734015078acff748aa2753eb2b6eab83bfd",
+      "operation": "search_android_classes",
+      "className": null,
+      "method": null,
+      "bodyStatus": null,
+      "topLevelClassCount": 4569
+    },
+    {
+      "file": "runtime-home-scan.json",
+      "sha256": "ab7dde88d73ad67233f9f20841270feac4a6fb6ddf33688917a4f367400c5271",
+      "evidenceId": "ev_25c7d4a81bf5376cfb811b5d08c410ac8fbc61279d343d5befcd80e2c3bd69f8",
+      "operation": "inspect_android_class",
+      "className": "com.qiekj.user.ui.activity.scan.HomeScanCodeAct",
+      "method": null,
+      "bodyStatus": null,
+      "topLevelClassCount": null
+    },
+    {
+      "file": "runtime-scan-vm.json",
+      "sha256": "391600a92cb8a207320a9de22e6e2c7b5b7e36e65bb1b7e68a31e4ab215dc3bb",
+      "evidenceId": "ev_ff2505515bd9fd8269f9d1dd8360fb259113302723057ad01e9b9eacd7b94969",
+      "operation": "inspect_android_class",
+      "className": "com.qiekj.user.viewmodel.home.ScanCodeViewModel",
+      "method": null,
+      "bodyStatus": null,
+      "topLevelClassCount": null
+    },
+    {
+      "file": "runtime-scan-result-method.json",
+      "sha256": "4327146d0f8eca2d209b6ca0db10c78336d32643066e8c998ce52f88d4c27406",
+      "evidenceId": "ev_d772f7af6366d2b22c529a47aa1f5ffac9963dea4ca88e7c9e655396cc730279",
+      "operation": "inspect_android_method",
+      "className": "com.qiekj.user.ui.activity.scan.HomeScanCodeAct",
+      "method": "scanCodeResult",
+      "bodyStatus": "available",
+      "topLevelClassCount": null
+    },
+    {
+      "file": "runtime-scan-observer-method.json",
+      "sha256": "e559383258fc67e24828a1ebd00c70e6482c7fb7842686afb64c716afa2118a1",
+      "evidenceId": "ev_7cfbd4dec478c78728147262814a5405fa57796f57e7e6d6b0169df25dca9031",
+      "operation": "inspect_android_method",
+      "className": "com.qiekj.user.ui.activity.scan.HomeScanCodeAct",
+      "method": "createObserver",
+      "bodyStatus": "available",
+      "topLevelClassCount": null
+    },
+    {
+      "file": "runtime-vm-scanv2-retry.json",
+      "sha256": "46a396b92dcb47d9b7e2ceefe31c0cc4e39a2bc6e308cfecb4ed69b03e7528e3",
+      "evidenceId": "ev_68ff7bfbfa9e9a1da6d5f36bee66b76647f9c9d79ca9a6eec4309cba29613117",
+      "operation": "inspect_android_method",
+      "className": "com.qiekj.user.viewmodel.ScanCodeVm",
+      "method": "scanV2",
+      "bodyStatus": "available",
+      "topLevelClassCount": null
+    },
+    {
+      "file": "runtime-alipay-flag-sequential.json",
+      "sha256": "dec44e62b530018bb8298883d6d72fc7d98c3a9aa53008010e748abdf52d1e3c",
+      "evidenceId": "ev_c36a67d48fead1f1e122bd6543bc7e9fff7772c791ab291cd17b93a34224f02a",
+      "operation": "inspect_android_method",
+      "className": "com.qiekj.user.entity.home.ScanV2Bean",
+      "method": "getJumpToAlipayFlag2",
+      "bodyStatus": "available",
+      "topLevelClassCount": null
+    },
+    {
+      "file": "runtime-locking-class.json",
+      "sha256": "30e549a3ea20d5b708d4344d11e30014e5e0157214d37c1a5091629beda7591e",
+      "evidenceId": "ev_22e82f9f429dfa499561972ab33399f8a2f355bcfbf6ef9828811b30d22504ea",
+      "operation": "inspect_android_class",
+      "className": "com.qiekj.user.ui.activity.scan.LockingAct",
+      "method": null,
+      "bodyStatus": null,
+      "topLevelClassCount": null
+    },
+    {
+      "file": "runtime-locking-observer-retry.json",
+      "sha256": "3ec73974035064142e5d72e9af58ad46b281cf7461192d3442f389d997ae7cc6",
+      "evidenceId": "ev_6c3c86bec6dc42ccfe8dea9077b4f827fb21aeaf0a6ebe92c54f505f8d206ff1",
+      "operation": "inspect_android_method",
+      "className": "com.qiekj.user.ui.activity.scan.LockingAct",
+      "method": "createObserver",
+      "bodyStatus": "available"
+    }
+  ],
+  "limitations": [
+    "Memory DEX header SHA-1 does not match; captured bytes were not repaired.",
+    "Original APK signature does not authenticate memory-derived code.",
+    "Two captured DEX files are partial runtime coverage, not complete client recovery.",
+    "JADX counts top-level representations separately from DEX class_defs.",
+    "Decompiled method availability is not dynamic execution or all-machine compatibility."
+  ]
+}

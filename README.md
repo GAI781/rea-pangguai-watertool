@@ -61,7 +61,7 @@ npm run preview
 - 旧照片异步解码不会覆盖后来选定的设备；离开页面释放相机。
 - 不收集账号、token、支付凭证，不调用设备解锁、创建订单或预支付接口。
 
-iPhone 相机需要 HTTPS。若要用网页版，可将 `dist` 内容上传至 Cloudflare Pages 等静态托管，用 Safari 访问 → 分享 → 添加到主屏幕。当前没有绑定部署账号，未提供公网产品 URL。无需为日常两个设备的快捷入口部署网站。
+iPhone 相机需要 HTTPS。若要用网页版，可将 `dist` 内容上传至 Cloudflare Pages 等静态托管，用 Safari 访问 → 分享 → 添加到主屏幕。源码已推送至 GitHub，构建 CI 通过；Pages 尚未发布，暂未提供公网产品 URL。无需为日常两个设备的快捷入口部署网站。
 
 同 Wi-Fi 下可用 iPhone 打开 Windows 开发服务（需防火墙允许），但局域网 HTTP 相机通常受限，可选择照片。iOS「文件」中的 HTML 预览不保证执行脚本，打不开复制按钮时长按完整链接或使用 `guide.txt`。此版本没有离线 service worker，网页初次加载需网络。
 
@@ -98,7 +98,7 @@ Linux 已有 Chromium 时：`CHROMIUM_PATH=/usr/bin/chromium npm run test:e2e --
 
 网页版识别或尝试识别任意新二维码后，可点击「导出格式兼容报告」。报告不含二维码原文、设备标记值或查询参数值；记录格式与支持状态，不自动上传。域名仍可能标识学校，分享前可检查。此功能帮助后续扩展适配，不会将未知码当作已支持设备。
 
-Android 运行环境后续已做实际安装和启动检查，仍未确认系统就绪；进一步探测的权限请求被取消，未安装运行 APK。具体边界、校验记录和待执行脚本见 [运行环境推进记录](docs/ANDROID-RUNTIME.md)。这不影响已实测的 iPhone 快捷入口。
+Android 研究已在隔离 ARM32 模拟器安装并运行原始官方 APK，停在未同意隐私条款的页面；取得两份部分运行时代码，REA 已读出此前静态不可见的扫码方法。具体来源、校验差异与结果见 [运行时发现](docs/ANDROID-RUNTIME-FINDINGS.md)。未登录或发起真实设备、订单与支付操作。
 
 ## v0.7 通用扫码指令与静态发布
 
@@ -108,4 +108,4 @@ Windows 可运行 `npm run scan-guide` 重生成说明。生产资源使用相�
 
 仓库附固定 commit 版本的 GitHub Actions 构建工作流，以及手动 Pages 发布工作流。若 Pages 未启用，仓库所有者需在 Settings → Pages → Build and deployment 中选择 GitHub Actions，再在 Actions 运行 Publish GitHub Pages。工作流不会上传私有照片、真实设备清单、APK 或研究用模拟器；仅上传 dist 静态文件。没有在代码中写入任何发布凭证。
 
-Android 研究已取得新的实际结果：32 位 ARM Android 7 系统启动完成，包管理检查成功，已验签 APK 安装成功并显示官方启动图。Activity 等待返回 timeout，故尚不能宣称业务初始化完整或已恢复加固代码。详见 [最新进展](docs/PROGRESS-v0.7.md)。
+Android 研究进一步取得部分运行时代码，REA 实际反编译 HomeScanCodeAct.scanCodeResult / createObserver 与 ScanCodeVm.scanV2，确认 NQT、IMEI、SN 的普通扫码分支及官方返回结果控制的后续分流。两份 DEX 不代表完整客户端，不能推出所有机型可用。详见 [运行时发现](docs/ANDROID-RUNTIME-FINDINGS.md)。

@@ -23,7 +23,7 @@ $('save').onclick=()=>{if(!current)return;const name=$('name').value.trim();if(!
 function render(){const box=$('devices');box.replaceChildren();const list=readDevices(storage);if(!list.length)box.textContent='还没有保存入口。';list.forEach(d=>{const row=document.createElement('div');row.className='device';const button=document.createElement('button');button.className='secondary';button.textContent=d.name;button.onclick=()=>{inspect(d.url);$('name').value=d.name;$('result').scrollIntoView({behavior:'smooth'});};const del=document.createElement('button');del.className='delete';del.textContent='删除';del.onclick=()=>persist(list.filter(x=>x.url!==d.url));row.append(button);
  if(inspectEntry(d.url).officialEligible){
   const launch=document.createElement('button');launch.className='launch';launch.textContent='打开支付宝';launch.setAttribute('aria-label',`打开支付宝：${d.name}`);
-  launch.onclick=()=>{const entry=inspectEntry(d.url);if(!confirm(`打开「${d.name}」的官方设备页？\nSN 尾号 ${entry.marker.slice(-6)}\n请核对现场设备和官方页面。这里只打开入口，实际用水仍需在官方操作。`))return;stop();window.location.assign(buildOfficialAlipayEntry(d.url));};
+  launch.onclick=()=>{const entry=inspectEntry(d.url);if(!confirm(`打开「${d.name}」的官方设备页？\n${entry.markerType} 尾号 ${entry.marker.slice(-6)}\n请核对现场设备和官方页面。这里只打开入口，实际用水仍需在官方操作。`))return;stop();window.location.assign(buildOfficialAlipayEntry(d.url));};
   row.append(launch);
  }
  row.append(del);box.append(row);});}
