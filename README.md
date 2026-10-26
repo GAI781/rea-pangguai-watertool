@@ -19,6 +19,14 @@
 
 完整的专属安装指南由下面的 Windows 命令生成，不是可一键导入的签名 `.shortcut` 包。
 
+## 分享给其他 iPhone 用户
+
+同楼层同设备可以直接分享已验证的快捷指令：打开指令编辑页 → 分享 → 复制 iCloud 链接 → 发给同学。对方打开链接添加即可，使用自己的支付宝账号在官方页面核对并确认。固定指令仅适用于对应设备，不需要他人安装开发工具。
+
+不同设备使用通用网页版：网站发布后把首页链接发给同学，在 Safari 扫码或选照片，可添加到主屏幕、收藏自己的设备。完整可转发说明见 [手机分享指南](public/share-guide.html)。网站不包含你的设备清单；通用原生扫码指令仍待真机验证。
+
+GitHub Pages 尚未启用。当前 GitHub 集成可读仓库管理状态和推送源码，但创建 Pages 的 API 返回 `Resource not accessible by integration`；repo admin 标记不代表该集成具有 Pages 管理权限。仓库所有者需打开 Settings → Pages，将 Source 设为 GitHub Actions，然后在 Actions → Publish GitHub Pages → Run workflow 发布。成功后以该工作流输出的真实地址为准；未发布前不要把预期地址作为可用产品链接转发。
+
 ## Windows 运行、生成指南与构建
 
 安装 Node.js 24.19 或更高的 24 LTS，在项目目录 PowerShell 执行：
