@@ -1,0 +1,51 @@
+{
+  "sourceEvidenceId": "ev_ef24c6f9e0a5821feb843e9ec1154cd43265503c24002f7a637414acaaf617ab",
+  "methodNodeId": "jsrg_node_f121187966a41903cdad38c09b4ae9396ab2fcc5e91ff73fd2570a12d0488078",
+  "source": "goods_newPreview~goods_orderDetail~pages_home~pages_orderDetail~pages_orderList~pages_skip.2168c3b9.js",
+  "range": {
+    "start": {
+      "line": 1,
+      "column": 4764
+    },
+    "end": {
+      "line": 1,
+      "column": 5458
+    }
+  },
+  "scope": "Only the isolated URL parser method was executed, with a local query-string stub and synthetic QR inputs. No full bundle, network, account, device or payment code was executed.",
+  "results": [
+    {
+      "key": "SN",
+      "value": "SOURCE_SAMPLE_01",
+      "officialParsed": {
+        "SN": "SOURCE_SAMPLE_01"
+      },
+      "adapterParsed": {
+        "SN": "SOURCE_SAMPLE_01"
+      },
+      "matched": true
+    },
+    {
+      "key": "NQT",
+      "value": "Test+abc/==",
+      "officialParsed": {
+        "NQT": "Test+abc/=="
+      },
+      "adapterParsed": {
+        "NQT": "Test+abc/=="
+      },
+      "matched": true
+    },
+    {
+      "key": "IMEI",
+      "value": "12345678",
+      "officialParsed": {
+        "IMEI": "12345678"
+      },
+      "adapterParsed": {
+        "IMEI": "12345678"
+      },
+      "matched": true
+    }
+  ]
+}

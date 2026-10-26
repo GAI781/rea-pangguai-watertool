@@ -1,0 +1,27 @@
+{
+  "name": "campus-water-entry",
+  "version": "0.7.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "playwright test",
+    "shortcuts": "node scripts/shortcuts.mjs",
+    "scan-guide": "node scripts/build-scan-guide.mjs"
+  },
+  "dependencies": {
+    "jsqr": "1.4.0",
+    "zxing-wasm": "3.1.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "qrcode": "1.5.4",
+    "vite": "8.3.5"
+  },
+  "engines": {
+    "node": ">=24.19.0"
+  }
+}

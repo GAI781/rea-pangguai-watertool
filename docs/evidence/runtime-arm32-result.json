@@ -1,0 +1,30 @@
+{
+  "api": 24,
+  "abi": "armeabi-v7a",
+  "serial": "emulator-5574",
+  "bootCompleted": true,
+  "apkInstalled": true,
+  "appProcessObserved": true,
+  "scope": "Dedicated empty AVD; no account, real QR, water or payment operation.",
+  "pid": 38436,
+  "systemPackage": {
+    "code": 0,
+    "stdout": "package:/system/framework/framework-res.apk",
+    "stderr": ""
+  },
+  "install": {
+    "code": 0,
+    "stdout": "Performing Push Install\nSuccess",
+    "stderr": "/workspace/research/android/QeUser.apk: 1 file pushed, 0 skipped. 11.6 MB/s (140641957 bytes in 11.578s)"
+  },
+  "launch": {
+    "code": 0,
+    "stdout": "Starting: Intent { cmp=com.qiekj.user/.ui.activity.SplashActivity }\nStatus: timeout\nActivity: com.qiekj.user/.ui.activity.SplashActivity\nWaitTime: 13072\nComplete",
+    "stderr": ""
+  },
+  "process": {
+    "code": 0,
+    "stdout": "1952",
+    "stderr": ""
+  }
+}

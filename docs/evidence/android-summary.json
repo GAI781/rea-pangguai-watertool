@@ -1,0 +1,86 @@
+{
+  "recordType": "derived-research-summary",
+  "source": "https://static.qiekj.com/soft/user/QeUser.apk",
+  "artifactSha256": "070de36f21e1128cea1bdc25a49241b3381276ff75b23974a477907fa44e971a",
+  "bytes": 140641957,
+  "package": {
+    "package_name": "com.qiekj.user",
+    "version_name": "1.81.4",
+    "version_code": "147",
+    "min_sdk": "21",
+    "target_sdk": "30",
+    "class_count": 6,
+    "resource_count": 6454
+  },
+  "applicationClass": "com.stub.StubApp",
+  "sourceEvidenceIds": {
+    "package": "ev_047a6c425e8d2189a3a5acf7ec2ec1071cab25c4c41bd19952af98d544a646c4",
+    "signature": "ev_eafa9907db105943fdb27095de9980d21f1dc1d16625ef855f15f9a64cd55e26",
+    "classes": "ev_91c09f211a49c171298a433bd0a5b5039319ef99866702f618c94968920bc356"
+  },
+  "visibleClasses": [
+    "com.qiekj.user.R",
+    "com.stub.StubApp",
+    "com.tianyu.util.Configuration",
+    "com.tianyu.util.DtcLoader",
+    "com.tianyu.util.a",
+    "kotlin.coroutines.jvm.internal.DebugProbesKt"
+  ],
+  "routes": [
+    {
+      "activity": "com.qiekj.user.ui.activity.SplashActivity",
+      "scheme": "um.62abfb4505844627b5b68062",
+      "host": null,
+      "exported": "true",
+      "authority": "manifest-declaration",
+      "iosSupport": "not-established"
+    },
+    {
+      "activity": "com.qiekj.user.MainActivity",
+      "scheme": "qiekeji",
+      "host": null,
+      "exported": "true",
+      "authority": "manifest-declaration",
+      "iosSupport": "not-established"
+    },
+    {
+      "activity": "com.qiekj.user.ui.activity.order.CmbPayResultActivity",
+      "scheme": "afhbaedbic",
+      "host": null,
+      "exported": "true",
+      "authority": "manifest-declaration",
+      "iosSupport": "not-established"
+    },
+    {
+      "activity": "com.qiekj.user.ui.activity.pay.OpenSuccessAct",
+      "scheme": "qiekj",
+      "host": null,
+      "exported": "true",
+      "authority": "manifest-declaration",
+      "iosSupport": "not-established"
+    }
+  ],
+  "limitations": [
+    "Only statically visible loader/resource classes were inventoried. This is not a decrypted business-code inventory.",
+    "Android intent filters do not establish iOS URL schemes or water-page parameters.",
+    "REA signing inspection is structural; independent Google apksig verification output is provided separately.",
+    "No official Android code was installed or run, and no account/device/payment API was called."
+  ],
+  "independentSignatureVerification": {
+    "tool": "Google apksig 9.4.1",
+    "verified": true,
+    "v1": true,
+    "v2": true,
+    "v3": false,
+    "warningsRetained": true
+  },
+  "loaderMethod": {
+    "evidenceId": "ev_d5e9af39cd6af43f7caf762fe2fb5e9a67c2f7042fd4cd03940b8b2063012edc",
+    "class": "com.stub.StubApp",
+    "name": "attachBaseContext",
+    "representation": "java",
+    "bodyStatus": "available",
+    "sourceSha256": "da1d321ba280496539e8fede7c0ad80b6d417efb4a91476c65bf254fc943f6c6",
+    "scope": "loader initialization only, not the unavailable scan business logic"
+  }
+}

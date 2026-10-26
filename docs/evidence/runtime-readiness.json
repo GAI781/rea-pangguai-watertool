@@ -1,0 +1,59 @@
+{
+  "scope": "Android runtime readiness, not device or payment validation",
+  "host": {
+    "architecture": "x86_64",
+    "logicalCpuCount": 5,
+    "kvmDevicePresent": false
+  },
+  "sdkArchives": [
+    {
+      "name": "platform-tools",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-linux.zip",
+      "sha1": "477254aa5f903c15cf51001717bdf347fb6b53e0",
+      "size": 9054187
+    },
+    {
+      "name": "emulator",
+      "url": "https://dl.google.com/android/repository/emulator-linux_x64-16428233.zip",
+      "sha1": "cd7362ea55dfb86a418958138dc396e74165dd01",
+      "size": 349654171
+    }
+  ],
+  "systemImageArchives": [
+    {
+      "path": "system-images;android-24;default;armeabi-v7a",
+      "url": "https://dl.google.com/android/repository/sys-img/android/armeabi-v7a-24_r07.zip",
+      "sha1": "3454546b4eed2d6c3dd06d47757d6da9f4176033",
+      "size": "283677512"
+    },
+    {
+      "path": "system-images;android-24;default;arm64-v8a",
+      "url": "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-24_r09.zip",
+      "sha1": "e88ebdf4533efa0370603ee4ab0e7834e0cc364f",
+      "size": "305854153"
+    }
+  ],
+  "archiveChecksums": "Matched official repository sizes and SHA-1 before extraction",
+  "accelerationCheck": {
+    "exitCode": 3,
+    "stdout": "accel:\n3\nKVM requires a CPU that supports vmx or svm\naccel",
+    "stderr": ""
+  },
+  "armLauncherResult": "INFO         | Android emulator version 37.2.12.0 (build_id 16428233) (CL:N/A)\nINFO         | Graphics backend: gfxstream\nFATAL        | CPU Architecture 'arm' is not supported by the QEMU2 emulator, (the classic engine is deprecated!)\n",
+  "arm64LauncherResult": "INFO         | Android emulator version 37.2.12.0 (build_id 16428233) (CL:N/A)\nINFO         | Graphics backend: gfxstream\nINFO         | Found systemPath /workspace/research-tools/android-runtime/sdk/system-images/android-24/default/arm64-v8a/\nFATAL        | QEMU2 emulator does not support arm64 CPU architecture\n",
+  "directBackend": {
+    "softwareTcgAdvertised": true,
+    "started": true,
+    "lastObservedAdbState": "offline",
+    "bootCompletedConfirmed": false,
+    "stoppedAfterProbe": true
+  },
+  "approvedApkProbe": {
+    "permissionRequest": "cancelled-by-user",
+    "resultFilePresent": false,
+    "bootLogPresent": false,
+    "apkInstalled": false,
+    "appStarted": false
+  },
+  "transactions": "No account login, QR submission, water control or payment operation"
+}
